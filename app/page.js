@@ -27,12 +27,13 @@ function page() {
       <div className=" flex justify-center">
         <div className="fixed bottom-7 flex border border-neutral-600 rounded-lg p-2 gap-x-5 text-neutral-500">
           <Link href={"/dashboard"}>
+            
             <span>
-              <PiHouseLight className="text-2xl" />
+              <PiHouseLight className="text-2xl text-white  " />
             </span>
           </Link>
           <span>
-            <PiGithubLogoLight className="text-2xl" />
+            <PiGithubLogoLight className="flex text-2xl items-center justify-center" />
           </span>
         </div>
       </div>
