@@ -29,7 +29,7 @@ function Homepage() {
             <div>
               <h1 className="text-2xl font-RubikMedium text-neutral-300">
                 Selected Work{" "}
-                <span className="text-sm text-neutral-400">UI UX Design</span>
+                <span className="text-sm text-neutral-400">Product Design</span>
               </h1>
               <p className="max-w-sm text-neutral-400 text-sm">
                Previously worked as Lead User Experience Designer at Usquare. 
@@ -107,7 +107,7 @@ function Homepage() {
                   height={1000}
                   width={1000}
                   className="w-24 h-24 object-cover rounded-md"
-                  src="/scult.jpeg"
+                  src="/UI02.webp"
                   alt=""
                 />
                 <div>

@@ -64,7 +64,7 @@ function Leftpage() {
                 width={1000}
                 height={1000}
                 className="w-28 h-28 rounded-full object-cover"
-                src="/black.jpeg"
+                src="/dp.jpg"
                 alt=""
               />
               <div

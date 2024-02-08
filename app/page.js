@@ -6,12 +6,12 @@ function page() {
   return (
     <div className=" ">
       <div className="p-5 fixed bottom-28 flex flex-col items-center justify-center mx-auto   w-full ">
-        <div className="bg-neutral-600 rounded-full ">
+        <div className="bg-neutral-600  ">
           <Image
             height={1000}
             width={1000}
             className="object-cover w-fit"
-            src="/emo.png"
+            src="/chin.png"
             alt=""
           />
         </div>

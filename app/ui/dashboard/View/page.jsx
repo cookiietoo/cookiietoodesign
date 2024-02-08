@@ -77,7 +77,7 @@ function page() {
             width={1000}
             height={1000}
             className="h-32 w-56 object-cover rounded-lg"
-            src="/game.jpg"
+            src="/3d.png"
             alt=""
           />
           <p className="my-3 font-RubikMedium text-sm">I love 3D Animation</p>
