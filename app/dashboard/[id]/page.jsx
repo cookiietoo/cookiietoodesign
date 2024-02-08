@@ -75,7 +75,7 @@ function page() {
             width={1000}
             height={1000}
             className="rounded-lg h-56 w-full object-cover"
-            src="/pic.jpg"
+            src="/Coduzion.PNG"
             alt=""
           />
        
