@@ -31,10 +31,13 @@ function page() {
             </h2>
             <p className="text-xs my-3 text-neutral-400 font-RubikRegular">
             Cookiietoo is the design practice of Nilesh. As a digital designer with a background in Product Design, I help brands express their unique voice through identity-driven products, experiences, and design systems.
-            </p>
+            </p> 
+            
+           
             <button className="bg-[#696969] h-7 p-1 rounded-md text-xs w-full font-RubikMedium text-neutral-50 ">
-              Download Resume
+              I'm Cool!
             </button>
+            
 
             <div className="border border-neutral-700 my-5" />
 
