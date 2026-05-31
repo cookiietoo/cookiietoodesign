@@ -23,14 +23,26 @@ export default function CaseStudySection({ section }) {
             <p className="mb-6 text-lg leading-relaxed md:text-xl">{p}</p>
           </Reveal>
         ))}
-        {images.map((img) => {
+        {images.map((img, idx) => {
           const src = typeof img === "string" ? img : img.src;
           const caption = typeof img === "string" ? null : img.caption;
+          const placeholder = typeof img === "object" ? img.placeholder : null;
           return (
-            <Reveal key={src} delay={0.05}>
+            <Reveal key={src || placeholder || idx} delay={0.05}>
               <figure className="mt-10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={src} alt={caption || ""} className="w-full rounded-md" />
+                {src ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={src} alt={caption || ""} className="w-full rounded-md" />
+                ) : (
+                  <div
+                    className="flex aspect-[16/10] w-full items-center justify-center rounded-md border border-dashed"
+                    style={{ borderColor: "var(--ink-40)", background: "var(--ink-07)" }}
+                  >
+                    <span className="px-6 text-center font-mono text-xs uppercase tracking-[0.16em]" style={{ color: "var(--ink-40)" }}>
+                      ▢ {placeholder || "Image"}
+                    </span>
+                  </div>
+                )}
                 {caption && (
                   <figcaption className="mt-3 text-sm" style={{ color: "var(--ink-60)" }}>
                     {caption}
