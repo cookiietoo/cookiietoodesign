@@ -7,7 +7,7 @@ export default function AboutTeaser() {
       <div className="md:col-span-7">
         <Reveal>
           <p className="text-2xl font-medium leading-[1.25] tracking-[-0.02em] md:text-4xl">
-            Senior Product Designer with 6 years across enterprise and consumer products —
+            Product Designer with 6 years across enterprise and consumer products —
             H&amp;M, Airbnb, and the Government of Saudi Arabia. I think in systems and design
             close to production.
           </p>

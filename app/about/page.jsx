@@ -3,13 +3,13 @@ import Reveal from "@/components/motion/Reveal";
 
 export const metadata = {
   title: "About — Nilesh Chhipa",
-  description: "Senior Product Designer — 6 years across enterprise and consumer products.",
+  description: "Product Designer — 6 years across enterprise and consumer products.",
 };
 
 const timeline = [
-  { years: "2024–26", role: "Sr. Product Designer", org: "Horizontal Digital",
+  { years: "2024–26", role: "Product Designer", org: "Horizontal Digital",
     note: "B2B electricity-connection portal for the Saudi Electric Company; +12% task success; Figma design system." },
-  { years: "2020–24", role: "Product Designer → Sr. Product Designer", org: "H&M",
+  { years: "2020–24", role: "Product Designer", org: "H&M",
     note: "Mobile product-discovery redesign; +8% CTR, −3% exit; research + shared component library." },
   { years: "2020", role: "Intern Product Designer", org: "Airbnb",
     note: "B2B payments redesign; contributions to the internal design system." },

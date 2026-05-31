@@ -9,13 +9,13 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", displ
 
 export const metadata = {
   metadataBase: new URL("https://cookiietoodesign.vercel.app"),
-  title: "Nilesh Chhipa — Senior Product Designer",
+  title: "Nilesh Chhipa — Product Designer",
   description:
-    "Senior Product Designer with 6 years across enterprise and consumer products. Past work: H&M, Airbnb, Government of Saudi Arabia.",
+    "Product Designer with 6 years across enterprise and consumer products. Past work: H&M, Airbnb, Government of Saudi Arabia.",
   openGraph: {
-    title: "Nilesh Chhipa — Senior Product Designer",
+    title: "Nilesh Chhipa — Product Designer",
     description:
-      "Senior Product Designer with 6 years across enterprise and consumer products. Past work: H&M, Airbnb, Government of Saudi Arabia.",
+      "Product Designer with 6 years across enterprise and consumer products. Past work: H&M, Airbnb, Government of Saudi Arabia.",
     type: "website",
   },
 };

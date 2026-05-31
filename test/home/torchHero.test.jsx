@@ -8,8 +8,8 @@ describe("TorchHero", () => {
     expect(
       screen.getByRole("heading", { level: 1, name: "Nilesh Chhipa" })
     ).toBeInTheDocument();
-    expect(screen.getByText("Senior Product Designer")).toBeInTheDocument();
-    expect(screen.getByText("Open to senior roles")).toBeInTheDocument();
+    expect(screen.getByText("Product Designer")).toBeInTheDocument();
+    expect(screen.getByText("Open to new roles")).toBeInTheDocument();
   });
 
   it("renders every skill as accessible text", () => {

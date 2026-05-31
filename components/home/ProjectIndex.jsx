@@ -41,7 +41,7 @@ export default function ProjectIndex() {
               </span>
               <span className="col-span-4 text-right font-mono text-xs uppercase tracking-[0.12em] md:col-span-2"
                     style={{ color: "var(--ink-40)" }}>
-                {p.client} · {p.year}
+                {p.client} · {p.year}{p.nda ? " · NDA" : ""}
               </span>
             </Link>
           </li>

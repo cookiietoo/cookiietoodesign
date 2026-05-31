@@ -13,6 +13,15 @@ export default function CaseStudyHeader({ project }) {
       <div className="mt-6 font-mono text-xs uppercase tracking-[0.14em]" style={{ color: "var(--ink-40)" }}>
         {project.role}
       </div>
+      {project.nda && (
+        <div
+          className="mt-8 inline-flex items-center gap-2 rounded-full border px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em]"
+          style={{ borderColor: "var(--ink-40)", color: "var(--ink-60)" }}
+        >
+          <span className="inline-block h-[6px] w-[6px] rounded-full" style={{ background: "var(--accent)" }} />
+          Under NDA — representative visuals
+        </div>
+      )}
     </header>
   );
 }
