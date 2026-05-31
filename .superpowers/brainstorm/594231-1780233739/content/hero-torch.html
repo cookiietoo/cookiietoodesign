@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torch Hero Prototype</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --paper:#f1ede4;
+    --ink:#16140f;
+    --accent:#d6492f;
+  }
+  html,body{height:100%;}
+  body{
+    background:var(--paper);
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    overflow:hidden;
+    cursor:none;
+  }
+  .stage{position:fixed;inset:0;}
+
+  /* subtle paper vignette so faint words feel "in shadow" */
+  .vignette{position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(120% 120% at 50% 40%,transparent 55%,rgba(22,20,15,.06));}
+
+  /* skill word layers */
+  .words{position:absolute;inset:0;pointer-events:none;}
+  .words span{
+    position:absolute;white-space:nowrap;letter-spacing:-.02em;
+    transform:translate(-50%,-50%);
+    font-weight:600;
+  }
+  /* faint always-on watermark */
+  .faint span{color:rgba(22,20,15,.07);}
+  /* revealed layer, masked to the torch radius */
+  .reveal span{color:var(--ink);}
+  .reveal .accentword{color:var(--accent);}
+  .reveal{
+    -webkit-mask-image:radial-gradient(circle 150px at -200px -200px,#000 0%,#000 52%,transparent 100%);
+            mask-image:radial-gradient(circle 150px at -200px -200px,#000 0%,#000 52%,transparent 100%);
+  }
+
+  /* warm torch glow */
+  .torch{position:absolute;width:420px;height:420px;border-radius:50%;left:0;top:0;
+    transform:translate(-50%,-50%);pointer-events:none;mix-blend-mode:multiply;
+    background:radial-gradient(circle,rgba(214,73,47,.06) 0%,rgba(214,73,47,0) 60%);
+    opacity:0;transition:opacity .4s;}
+
+  /* center identity (always visible, on top) */
+  .identity{position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;pointer-events:none;}
+  .identity h1{font-size:clamp(48px,9vw,140px);font-weight:600;letter-spacing:-.04em;line-height:.92;}
+  .identity .role{margin-top:18px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;
+    color:rgba(22,20,15,.6);}
+
+  /* top + bottom chrome */
+  .top{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;
+    padding:24px 32px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:rgba(22,20,15,.55);z-index:5;}
+  .top .status{color:var(--accent);display:flex;align-items:center;gap:7px;}
+  .top .status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);}
+  .hint{position:fixed;bottom:26px;left:0;right:0;text-align:center;font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase;color:rgba(22,20,15,.4);
+    animation:pulse 2.6s ease-in-out infinite;z-index:5;}
+  @keyframes pulse{0%,100%{opacity:.25}50%{opacity:.7}}
+
+  /* custom cursor */
+  .cursor{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;
+    background:var(--accent);transform:translate(-50%,-50%);pointer-events:none;z-index:10;
+    mix-blend-mode:normal;transition:width .2s,height .2s;}
+  .cursor-ring{position:fixed;left:0;top:0;width:150px;height:150px;border-radius:50%;
+    border:1px solid rgba(22,20,15,.12);transform:translate(-50%,-50%);pointer-events:none;z-index:9;}
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="words faint" id="faint"></div>
+    <div class="words reveal" id="reveal"></div>
+    <div class="torch" id="torch"></div>
+    <div class="vignette"></div>
+
+    <div class="identity">
+      <h1>Nilesh<br>Chhipa</h1>
+      <div class="role">Senior Product Designer</div>
+    </div>
+  </div>
+
+  <div class="top">
+    <span>Cookiietoo® — Nilesh Chhipa</span>
+    <span class="status">Open to senior roles</span>
+  </div>
+  <div class="hint">Move your cursor — find what I do</div>
+
+  <div class="cursor-ring" id="ring"></div>
+  <div class="cursor" id="cursor"></div>
+
+<script>
+  // skills with positions (%) avoiding the central identity zone
+  const skills = [
+    {t:"Design Systems", x:16, y:20, s:46, accent:true},
+    {t:"UX Research",    x:80, y:16, s:34},
+    {t:"UI Design",      x:22, y:78, s:52, accent:true},
+    {t:"Prototyping",    x:84, y:74, s:30},
+    {t:"Interaction Design", x:13, y:50, s:26},
+    {t:"Accessibility",  x:88, y:44, s:28},
+    {t:"Information Architecture", x:50, y:11, s:24},
+    {t:"User Testing",   x:50, y:90, s:30},
+    {t:"Visual Design",  x:30, y:34, s:22},
+    {t:"Design Tokens",  x:72, y:60, s:24},
+    {t:"3D / Motion",    x:68, y:30, s:30, accent:true},
+    {t:"Wireframing",    x:34, y:64, s:20},
+    {t:"Figma",          x:90, y:88, s:22},
+    {t:"Storybook",      x:9,  y:88, s:20},
+    {t:"Usability Testing", x:62, y:84, s:22},
+  ];
+  function build(layer){
+    skills.forEach(k=>{
+      const s=document.createElement('span');
+      s.textContent=k.t;
+      s.style.left=k.x+'%';
+      s.style.top=k.y+'%';
+      s.style.fontSize=k.s+'px';
+      if(k.accent && layer.classList.contains('reveal')) s.classList.add('accentword');
+      layer.appendChild(s);
+    });
+  }
+  build(document.getElementById('faint'));
+  build(document.getElementById('reveal'));
+
+  const reveal=document.getElementById('reveal');
+  const torch=document.getElementById('torch');
+  const cursor=document.getElementById('cursor');
+  const ring=document.getElementById('ring');
+  let tx=-200,ty=-200,rx=-200,ry=-200;
+
+  window.addEventListener('mousemove',e=>{
+    tx=e.clientX; ty=e.clientY;
+    const m=`radial-gradient(circle 150px at ${tx}px ${ty}px,#000 0%,#000 52%,transparent 100%)`;
+    reveal.style.webkitMaskImage=m;
+    reveal.style.maskImage=m;
+    torch.style.left=tx+'px'; torch.style.top=ty+'px'; torch.style.opacity=1;
+    cursor.style.left=tx+'px'; cursor.style.top=ty+'px';
+  });
+  // smooth trailing ring
+  function loop(){
+    rx+=(tx-rx)*.15; ry+=(ty-ry)*.15;
+    ring.style.left=rx+'px'; ring.style.top=ry+'px';
+    requestAnimationFrame(loop);
+  }
+  loop();
+</script>
+</body>
+</html>
