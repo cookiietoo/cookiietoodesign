@@ -8,9 +8,16 @@ const grotesk = Inter({ subsets: ["latin"], variable: "--font-grotesk", display:
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
 export const metadata = {
+  metadataBase: new URL("https://cookiietoodesign.vercel.app"),
   title: "Nilesh Chhipa — Senior Product Designer",
   description:
     "Senior Product Designer with 6 years across enterprise and consumer products. Past work: H&M, Airbnb, Government of Saudi Arabia.",
+  openGraph: {
+    title: "Nilesh Chhipa — Senior Product Designer",
+    description:
+      "Senior Product Designer with 6 years across enterprise and consumer products. Past work: H&M, Airbnb, Government of Saudi Arabia.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
