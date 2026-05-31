@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cookiietoo — Nilesh Chhipa Portfolio
 
-## Getting Started
+Editorial-minimal portfolio for **Nilesh Chhipa, Senior Product Designer**. Warm paper + ink + one vermillion accent, a torch-reveal hero, custom cursor, and template-driven case studies.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router) · **React** · **Tailwind CSS v4**
+- **Lenis** (smooth scroll) · **GSAP** (marquee) · **motion / Framer Motion** (reveals, page transitions)
+- **Vitest** + React Testing Library
+
+## Scripts
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # local dev at http://localhost:3000
+npm test         # run the unit test suite
+npm run build    # production build (static export of all routes)
+npm start        # serve the production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project structure
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+app/                 routes: / (home), /about, /work/[slug] (case studies), sitemap, robots
+components/
+  home/              hero + home sections (TorchHero, ProjectIndex, ClientMarquee, …)
+  work/              case study sub-components (header, section, outcomes)
+  motion/            MagneticButton, Reveal, PageTransition
+  cursor/            CustomCursor
+  providers/         SmoothScroll (Lenis)
+lib/
+  content/           site.js (identity, skills, clients) + projects.js (case study data)
+  hooks/             useReducedMotion, usePointerFine
+  motion/            magnetic offset helper
+public/cv/           downloadable résumé PDF
+docs/superpowers/    design spec + implementation plan
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
+All copy lives in `lib/content/` — **no layout changes needed** to update the site:
 
-To learn more about Next.js, take a look at the following resources:
+- **Identity, skills, clients, links:** `lib/content/site.js`
+  - ⚠️ `site.linkedin` is a placeholder — set the real LinkedIn URL.
+- **Case studies:** `lib/content/projects.js`. To **add a project**, append an entry (slug, title, client, role, year, summary, `preview`, `sections[]`, `outcomes[]`); it automatically appears in the home work index, gets a `/work/<slug>` page, and joins the sitemap.
+- **Imagery:** drop files in `public/work/<slug>/` and reference them from the project's `preview` / `sections[].images`. (Preview boxes render a neutral fill until real images are added.)
+- **Résumé:** replace `public/cv/Nilesh_Chhipa_Product_Designer.pdf` (keep the path or update `site.cvPath`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Accessibility & responsiveness
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- All motion respects `prefers-reduced-motion` (the torch hero, reveals, marquee, smooth scroll, and page transitions degrade to static/native).
+- Custom cursor and magnetic effects activate only on fine pointers; touch gets tap-friendly fallbacks.
 
-## Deploy on Vercel
+## Deployment / cutover
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploys to **Vercel**. To replace the current site, point the existing
+`cookiietoodesign.vercel.app` Vercel project at this repository's
+`build/portfolio-redesign` branch (or merge it to `main` first). Update the
+`metadataBase` / sitemap base URL in `app/layout.jsx`, `app/sitemap.js`, and
+`app/robots.js` if the domain changes.
