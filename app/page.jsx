@@ -1,5 +1,7 @@
 import TorchHero from "@/components/home/TorchHero";
 import IntroStatement from "@/components/home/IntroStatement";
+import UIWork from "@/components/home/UIWork";
+import HowIWork from "@/components/home/HowIWork";
 import ProjectIndex from "@/components/home/ProjectIndex";
 import ClientMarquee from "@/components/home/ClientMarquee";
 import AboutTeaser from "@/components/home/AboutTeaser";
@@ -10,6 +12,8 @@ export default function Home() {
     <main>
       <TorchHero />
       <IntroStatement />
+      <UIWork />
+      <HowIWork />
       <ProjectIndex />
       <ClientMarquee />
       <AboutTeaser />

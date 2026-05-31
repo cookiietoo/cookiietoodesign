@@ -20,6 +20,10 @@
 
 html { -webkit-font-smoothing: antialiased; }
 
+/* horizontal scrollers without a visible scrollbar */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
 body {
   background: var(--paper);
   color: var(--ink);

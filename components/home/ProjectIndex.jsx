@@ -1,12 +1,12 @@
 "use client";
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { getAllProjects } from "@/lib/content/projects";
+import { getIndexProjects } from "@/lib/content/projects";
 import { usePointerFine } from "@/lib/hooks/usePointerFine";
 
 export default function ProjectIndex() {
   const fine = usePointerFine();
-  const projects = getAllProjects();
+  const projects = getIndexProjects();
   const [active, setActive] = useState(null);
   const previewRef = useRef(null);
 
