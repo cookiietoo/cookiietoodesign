@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="sh" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#16140f" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#f4f1ea"/>
+  <text x="100" y="100" fill="#E1130E" font-size="18" letter-spacing="5" font-weight="700">SIZE SELECTION</text>
+  <text x="98" y="150" fill="#16140f" font-size="44" font-weight="700" letter-spacing="-1">Confident sizing with fit guidance built in</text>
+
+  <!-- phone -->
+  <g transform="translate(180,230)" filter="url(#sh)">
+    <rect x="0" y="0" width="330" height="660" rx="44" fill="#15130f"/>
+    <rect x="14" y="16" width="302" height="628" rx="32" fill="#ffffff"/>
+    <rect x="34" y="44" width="262" height="190" rx="14" fill="#ece6d9"/>
+    <rect x="120" y="70" width="90" height="140" rx="8" fill="#d6cfbf"/>
+    <text x="34" y="278" fill="#16140f" font-size="20" font-weight="700">Ribbed Knit Sweater</text>
+    <text x="34" y="306" fill="#E1130E" font-size="18" font-weight="700">$ 29.99</text>
+    <text x="34" y="348" fill="#8a847c" font-size="13" letter-spacing="2">SELECT SIZE</text>
+    <!-- size chips -->
+    <g font-size="16" font-weight="600" text-anchor="middle">
+      <rect x="34" y="362" width="56" height="48" rx="10" fill="#f0ece5"/><text x="62" y="392" fill="#a39d92">XS</text>
+      <rect x="100" y="362" width="56" height="48" rx="10" fill="#f0ece5"/><text x="128" y="392" fill="#16140f">S</text>
+      <rect x="166" y="362" width="56" height="48" rx="10" fill="#16140f"/><text x="194" y="392" fill="#fff">M</text>
+      <rect x="232" y="362" width="64" height="48" rx="10" fill="#f0ece5"/><text x="264" y="392" fill="#16140f">L</text>
+    </g>
+    <!-- fit guidance -->
+    <rect x="34" y="430" width="262" height="86" rx="12" fill="#fbeceb"/>
+    <circle cx="58" cy="458" r="10" fill="#E1130E"/><text x="58" y="463" fill="#fff" font-size="13" text-anchor="middle" font-weight="700">i</text>
+    <text x="80" y="455" fill="#16140f" font-size="13" font-weight="700">Fits true to size</text>
+    <text x="80" y="476" fill="#8a847c" font-size="12">Based on 2,300 customer reviews.</text>
+    <text x="80" y="496" fill="#8a847c" font-size="12">Between sizes? Size up for a relaxed fit.</text>
+    <!-- size guide link -->
+    <text x="34" y="548" fill="#E1130E" font-size="13" font-weight="700" text-decoration="underline">View size guide ›</text>
+    <!-- CTA -->
+    <rect x="34" y="572" width="262" height="50" rx="25" fill="#16140f"/>
+    <text x="165" y="603" fill="#fff" font-size="15" font-weight="600" text-anchor="middle">Add to bag</text>
+  </g>
+
+  <!-- side annotations -->
+  <g transform="translate(640,360)">
+    <circle cx="0" cy="0" r="7" fill="#E1130E"/><text x="22" y="6" fill="#16140f" font-size="22" font-weight="700">Selected state is unambiguous</text>
+    <text x="22" y="38" fill="#8a847c" font-size="17">High-contrast active chip removes “did it register?” doubt.</text>
+  </g>
+  <g transform="translate(640,500)">
+    <circle cx="0" cy="0" r="7" fill="#E1130E"/><text x="22" y="6" fill="#16140f" font-size="22" font-weight="700">Fit guidance at the decision point</text>
+    <text x="22" y="38" fill="#8a847c" font-size="17">Review-backed advice reduces hesitation and returns.</text>
+  </g>
+  <g transform="translate(640,640)">
+    <circle cx="0" cy="0" r="7" fill="#E1130E"/><text x="22" y="6" fill="#16140f" font-size="22" font-weight="700">Size guide one tap away</text>
+    <text x="22" y="38" fill="#8a847c" font-size="17">Without leaving the product context.</text>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="sh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#16140f" flood-opacity="0.10"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#f4f1ea"/>
+  <text x="100" y="100" fill="#E1130E" font-size="18" letter-spacing="5" font-weight="700">DESIGN SYSTEM</text>
+  <text x="98" y="150" fill="#16140f" font-size="44" font-weight="700" letter-spacing="-1">A shared component library, aligned across platforms</text>
+
+  <!-- Colour tokens -->
+  <g transform="translate(100,210)" filter="url(#sh)">
+    <rect width="430" height="330" rx="16" fill="#fff"/>
+    <text x="28" y="46" fill="#16140f" font-size="18" font-weight="700">Colour tokens</text>
+    <g>
+      <rect x="28" y="70" width="80" height="80" rx="10" fill="#E1130E"/><text x="28" y="170" fill="#16140f" font-size="12" font-weight="600">brand/red</text><text x="28" y="186" fill="#a39d92" font-size="11">#E1130E</text>
+      <rect x="128" y="70" width="80" height="80" rx="10" fill="#16140f"/><text x="128" y="170" fill="#16140f" font-size="12" font-weight="600">ink/900</text><text x="128" y="186" fill="#a39d92" font-size="11">#16140F</text>
+      <rect x="228" y="70" width="80" height="80" rx="10" fill="#8a847c"/><text x="228" y="170" fill="#16140f" font-size="12" font-weight="600">ink/500</text><text x="228" y="186" fill="#a39d92" font-size="11">#8A847C</text>
+      <rect x="328" y="70" width="80" height="80" rx="10" fill="#f0ece5" stroke="#e7e1d6"/><text x="328" y="170" fill="#16140f" font-size="12" font-weight="600">surface</text><text x="328" y="186" fill="#a39d92" font-size="11">#F0ECE5</text>
+    </g>
+    <text x="28" y="232" fill="#16140f" font-size="18" font-weight="700">Spacing</text>
+    <g fill="#E1130E"><rect x="28" y="250" width="8" height="40" rx="2"/><rect x="56" y="250" width="16" height="40" rx="2"/><rect x="92" y="250" width="24" height="40" rx="2"/><rect x="136" y="250" width="32" height="40" rx="2"/><rect x="188" y="250" width="48" height="40" rx="2"/></g>
+    <g fill="#a39d92" font-size="11" text-anchor="middle"><text x="32" y="308">4</text><text x="64" y="308">8</text><text x="104" y="308">12</text><text x="152" y="308">16</text><text x="212" y="308">24</text></g>
+  </g>
+
+  <!-- Type scale -->
+  <g transform="translate(560,210)" filter="url(#sh)">
+    <rect width="430" height="330" rx="16" fill="#fff"/>
+    <text x="28" y="46" fill="#16140f" font-size="18" font-weight="700">Type scale</text>
+    <text x="28" y="100" fill="#16140f" font-size="40" font-weight="700">Display</text>
+    <text x="28" y="150" fill="#16140f" font-size="28" font-weight="700">Heading</text>
+    <text x="28" y="194" fill="#16140f" font-size="20" font-weight="600">Subheading</text>
+    <text x="28" y="234" fill="#16140f" font-size="16">Body — the quick brown fox jumps</text>
+    <text x="28" y="270" fill="#8a847c" font-size="13">Caption — supporting detail text</text>
+    <text x="28" y="306" fill="#a39d92" font-size="11" letter-spacing="2">LABEL · UPPERCASE</text>
+  </g>
+
+  <!-- Components -->
+  <g transform="translate(1020,210)" filter="url(#sh)">
+    <rect width="480" height="330" rx="16" fill="#fff"/>
+    <text x="28" y="46" fill="#16140f" font-size="18" font-weight="700">Components</text>
+    <rect x="28" y="68" width="150" height="46" rx="23" fill="#16140f"/><text x="103" y="97" fill="#fff" font-size="14" text-anchor="middle" font-weight="600">Primary</text>
+    <rect x="194" y="68" width="150" height="46" rx="23" fill="#fff" stroke="#16140f" stroke-width="2"/><text x="269" y="97" fill="#16140f" font-size="14" text-anchor="middle" font-weight="600">Secondary</text>
+    <rect x="360" y="68" width="92" height="46" rx="23" fill="#fbeceb"/><text x="406" y="97" fill="#E1130E" font-size="14" text-anchor="middle" font-weight="700">Tag</text>
+    <rect x="28" y="132" width="424" height="46" rx="10" fill="#f0ece5"/><text x="44" y="160" fill="#a39d92" font-size="14">Input field</text>
+    <!-- product card component -->
+    <rect x="28" y="194" width="120" height="112" rx="10" fill="#f3efe8"/><rect x="40" y="206" width="96" height="64" rx="6" fill="#e3ddd0"/><rect x="40" y="278" width="70" height="8" rx="4" fill="#cfc8b9"/><rect x="40" y="292" width="44" height="8" rx="4" fill="#E1130E"/>
+    <rect x="164" y="194" width="120" height="112" rx="10" fill="#f3efe8"/><rect x="176" y="206" width="96" height="64" rx="6" fill="#e6e0d3"/><rect x="176" y="278" width="70" height="8" rx="4" fill="#cfc8b9"/><rect x="176" y="292" width="44" height="8" rx="4" fill="#E1130E"/>
+    <rect x="300" y="194" width="152" height="112" rx="10" fill="#f7f4ee"/><text x="316" y="224" fill="#16140f" font-size="13" font-weight="700">Toast</text><circle cx="324" cy="252" r="8" fill="#E1130E"/><text x="324" y="257" fill="#fff" font-size="11" text-anchor="middle" font-weight="700">✓</text><text x="340" y="257" fill="#8a847c" font-size="12">Added to bag</text>
+  </g>
+
+  <text x="100" y="620" fill="#16140f" font-size="22" font-weight="700">Audited existing patterns · aligned mobile components with the broader system</text>
+  <g transform="translate(100,650)" font-size="16" fill="#8a847c">
+    <text x="0" y="30">→ Consistent UI across iOS and Android</text>
+    <text x="0" y="64">→ Reduced design-to-development friction</text>
+    <text x="0" y="98">→ New features ship on a dependable, reusable foundation</text>
+  </g>
+</svg>

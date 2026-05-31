@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="sh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#16140f" flood-opacity="0.10"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#f4f1ea"/>
+  <text x="100" y="100" fill="#E1130E" font-size="18" letter-spacing="5" font-weight="700">TESTING &amp; ITERATION</text>
+  <text x="98" y="150" fill="#16140f" font-size="44" font-weight="700" letter-spacing="-1">Moderated testing, synthesised into iterations</text>
+
+  <!-- participant + device -->
+  <g transform="translate(100,230)" filter="url(#sh)">
+    <rect width="560" height="600" rx="20" fill="#fff"/>
+    <text x="32" y="50" fill="#16140f" font-size="18" font-weight="700">Usability session</text>
+    <!-- person -->
+    <circle cx="120" cy="180" r="56" fill="#ece6d9"/><circle cx="120" cy="160" r="24" fill="#cfc8b9"/><path d="M76 210 a44 40 0 0 1 88 0 z" fill="#cfc8b9"/>
+    <!-- speech -->
+    <g transform="translate(200,120)"><rect width="320" height="120" rx="14" fill="#f7f4ee"/><path d="M0 60 l-16 8 l16 8 z" fill="#f7f4ee"/><text x="22" y="42" fill="#16140f" font-size="14">“I wasn’t sure which size</text><text x="22" y="68" fill="#16140f" font-size="14">to pick — now the fit note</text><text x="22" y="94" fill="#16140f" font-size="14">makes it obvious.”</text></g>
+    <!-- mini device -->
+    <g transform="translate(60,280)"><rect width="180" height="280" rx="24" fill="#15130f"/><rect x="8" y="10" width="164" height="260" rx="18" fill="#fff"/><rect x="26" y="30" width="128" height="80" rx="8" fill="#ece6d9"/><rect x="26" y="124" width="80" height="10" rx="5" fill="#ded7c9"/><rect x="26" y="146" width="40" height="32" rx="8" fill="#16140f"/><rect x="74" y="146" width="40" height="32" rx="8" fill="#f0ece5"/><rect x="122" y="146" width="40" height="32" rx="8" fill="#f0ece5"/><rect x="26" y="200" width="128" height="40" rx="20" fill="#16140f"/></g>
+    <!-- observations -->
+    <g transform="translate(280,280)" font-size="13" fill="#16140f">
+      <rect width="230" height="40" rx="8" fill="#fde7a6"/><text x="16" y="26">3/5 hesitated at size step</text>
+      <rect y="52" width="230" height="40" rx="8" fill="#fde7a6"/><text x="16" y="78">“Free shipping” unclear</text>
+      <rect y="104" width="230" height="40" rx="8" fill="#f6c9c6"/><text x="16" y="130">Cart edit hard to find</text>
+      <rect y="156" width="230" height="40" rx="8" fill="#d6ead6"/><text x="16" y="182">Fit note → confidence ↑</text>
+    </g>
+  </g>
+
+  <!-- metrics -->
+  <g transform="translate(720,230)">
+    <text x="0" y="40" fill="#16140f" font-size="22" font-weight="700">Synthesised into measurable wins</text>
+    <g filter="url(#sh)"><rect x="0" y="70" width="370" height="130" rx="16" fill="#fff"/><text x="28" y="140" fill="#E1130E" font-size="56" font-weight="800">+8%</text><text x="200" y="132" fill="#16140f" font-size="17" font-weight="600">click-through</text><text x="200" y="158" fill="#8a847c" font-size="14">on product discovery</text></g>
+    <g filter="url(#sh)"><rect x="0" y="220" width="370" height="130" rx="16" fill="#fff"/><text x="28" y="290" fill="#E1130E" font-size="56" font-weight="800">−3%</text><text x="200" y="282" fill="#16140f" font-size="17" font-weight="600">exit rate</text><text x="200" y="308" fill="#8a847c" font-size="14">across the journey</text></g>
+    <g filter="url(#sh)"><rect x="0" y="370" width="370" height="130" rx="16" fill="#fff"/><text x="28" y="440" fill="#16140f" font-size="40" font-weight="800">iOS +</text><text x="28" y="478" fill="#16140f" font-size="40" font-weight="800">Android</text><text x="210" y="452" fill="#8a847c" font-size="14">shipped &amp; aligned</text></g>
+  </g>
+</svg>
