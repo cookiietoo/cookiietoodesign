@@ -7,8 +7,9 @@ import {
   PiMagicWandThin,
   PiShapesThin,
   PiHouseLight,
+  PiBriefcaseLight,
 } from "react-icons/pi";
-import { SiAdobe } from "react-icons/si";
+import { SiAirbnb, SiHandm } from "react-icons/si";
 
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
@@ -83,7 +84,7 @@ function Leftpage() {
                 Nilesh Chhipa
               </h1>
               <p className="text-xs font-RubikMedium text-neutral-300 mt-2">
-                WA?PH +91-9079298387 📧
+                WA?PH +91-8905612026 📧
               </p>
 
               <p className="text-xs font-RubikMedium text-neutral-300 mt-1">
@@ -144,14 +145,14 @@ function Leftpage() {
             <h2 className="font-RubikBold my-4">Bio</h2>
             <p className="text-[12px]  font-RubikRegular my-3">
               The world of digital design and <br /> development is constantly
-              evolving and so <br /> has my role over the last 5 years.{" "}
+              evolving and so <br /> has my role over the last 6 years.{" "}
             </p>
 
             <div className="mt-6 flex justify-between text-sm">
               <div className="flex items-center gap-x-1">
                 <PiShapesThin />
                 <span className="text-xs font-RubikRegular">
-                  5 Years as a UX Designer!
+                  6 Years as a UX Designer!
                 </span>
               </div>
               <div className="flex items-center gap-x-1">
@@ -166,42 +167,42 @@ function Leftpage() {
               <h1 className="font-RubikRegular">Work History</h1>
               <div className="mt-7 flex  justify-between">
                 <div className="flex gap-x-3">
-                  <PiGoogleLogoThin className="text-xl" />
+                  <PiBriefcaseLight className="text-xl" />
                   <div className="-mt-1">
-                    <h3 className="text-sm font-RubikMedium">Lead UX Designer</h3>
-                    <p className="text-[9px]">Coduzion/Usquare</p>
+                    <h3 className="text-sm font-RubikMedium">Sr. Product Designer</h3>
+                    <p className="text-[9px]">Horizontal Digital</p>
                   </div>
                 </div>
                 <small className="text-[9px] text-neutral-300">
-                  October 2022 - January 2024 
+                  September 2024 - April 2026
                 </small>
               </div>
               <div className="my-3 flex  justify-between">
                 <div className="flex gap-x-3">
-                  <SiAdobe className="text-xl" />
+                  <SiHandm className="text-xl" />
                   <div className="-mt-1">
                     <h3 className="text-sm font-RubikMedium">
-                      Sr. UI UX Designer
+                      Product Designer → Sr. Product Designer
                     </h3>
-                    <p className="text-[9px]">Exlance</p>
+                    <p className="text-[9px]">H&M (Hennes & Mauritz)</p>
                   </div>
                 </div>
                 <small className="text-[9px] text-neutral-300">
-                  June 2022 - October 2022
+                  August 2020 - August 2024
                 </small>
               </div>
               <div className="my-3 flex  justify-between">
                 <div className="flex gap-x-3">
-                  <SiAdobe className="text-xl" />
+                  <SiAirbnb className="text-xl" />
                   <div className="-mt-1">
                     <h3 className="text-sm font-RubikMedium">
-                      UX Designer
+                      Intern Product Designer
                     </h3>
-                    <p className="text-[9px]">Flo Studio</p>
+                    <p className="text-[9px]">Airbnb</p>
                   </div>
                 </div>
                 <small className="text-[9px] text-neutral-300">
-                  August 2020 - June 2022
+                  April 2020 - July 2020
                 </small>
               </div>
             </div>
