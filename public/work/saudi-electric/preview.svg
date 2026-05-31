@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="sh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#16140f" flood-opacity="0.18"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#e7eef6"/>
+  <circle cx="1300" cy="780" r="300" fill="#dbe7f3"/>
+  <text x="120" y="170" fill="#1763a6" font-size="44" font-weight="800" letter-spacing="-1">SEC · B2B Portal</text>
+  <text x="120" y="232" fill="#16140f" font-size="32" font-weight="700">Electricity connections</text>
+  <text x="122" y="280" fill="#5b6b7d" font-size="22">Workflows · Approvals · Design system</text>
+
+  <!-- dashboard window -->
+  <g transform="translate(720,210) rotate(-3)" filter="url(#sh)">
+    <rect width="760" height="560" rx="16" fill="#fff"/>
+    <rect width="760" height="40" rx="16" fill="#eef1ee"/><rect y="24" width="760" height="16" fill="#eef1ee"/>
+    <circle cx="26" cy="20" r="5" fill="#d9d4ca"/><circle cx="44" cy="20" r="5" fill="#d9d4ca"/><circle cx="62" cy="20" r="5" fill="#d9d4ca"/>
+    <rect x="0" y="40" width="170" height="520" fill="#14304a"/>
+    <text x="22" y="78" fill="#fff" font-size="15" font-weight="700">SEC Portal</text>
+    <rect x="14" y="98" width="142" height="30" rx="8" fill="#1763a6"/>
+    <g fill="#46617c"><rect x="14" y="140" width="142" height="14" rx="7"/><rect x="14" y="166" width="142" height="14" rx="7"/><rect x="14" y="192" width="142" height="14" rx="7"/><rect x="14" y="218" width="120" height="14" rx="7"/></g>
+    <!-- content -->
+    <rect x="194" y="70" width="170" height="80" rx="12" fill="#f3f6fa"/><text x="212" y="118" fill="#1763a6" font-size="30" font-weight="800">128</text>
+    <rect x="378" y="70" width="170" height="80" rx="12" fill="#eefaf4"/><text x="396" y="118" fill="#2e9e6b" font-size="30" font-weight="800">86%</text>
+    <rect x="562" y="70" width="170" height="80" rx="12" fill="#f3f6fa"/><text x="580" y="118" fill="#1763a6" font-size="30" font-weight="800">4.2d</text>
+    <rect x="194" y="166" width="538" height="370" rx="12" fill="#fff" stroke="#ebe6dc"/>
+    <rect x="194" y="166" width="538" height="36" rx="12" fill="#f7f4ee"/>
+    <g font-size="12">
+      <rect x="640" y="224" width="76" height="20" rx="10" fill="#eefaf4"/><rect x="640" y="266" width="76" height="20" rx="10" fill="#fff3da"/><rect x="640" y="308" width="76" height="20" rx="10" fill="#e7eef6"/><rect x="640" y="350" width="76" height="20" rx="10" fill="#eefaf4"/><rect x="640" y="392" width="76" height="20" rx="10" fill="#fff3da"/>
+      <g fill="#e7e1d6"><rect x="214" y="228" width="120" height="12" rx="6"/><rect x="214" y="270" width="120" height="12" rx="6"/><rect x="214" y="312" width="120" height="12" rx="6"/><rect x="214" y="354" width="120" height="12" rx="6"/><rect x="214" y="396" width="120" height="12" rx="6"/></g>
+    </g>
+  </g>
+</svg>

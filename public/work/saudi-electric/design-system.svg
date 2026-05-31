@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="sh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#16140f" flood-opacity="0.10"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#f4f1ea"/>
+  <text x="100" y="100" fill="#1763a6" font-size="18" letter-spacing="5" font-weight="700">DESIGN SYSTEM</text>
+  <text x="98" y="150" fill="#16140f" font-size="44" font-weight="700" letter-spacing="-1">A Figma system that standardised the B2B portal</text>
+
+  <!-- tokens -->
+  <g transform="translate(100,210)" filter="url(#sh)">
+    <rect width="430" height="330" rx="16" fill="#fff"/>
+    <text x="28" y="46" fill="#16140f" font-size="18" font-weight="700">Tokens</text>
+    <rect x="28" y="70" width="80" height="80" rx="10" fill="#1763a6"/><text x="28" y="170" fill="#16140f" font-size="12" font-weight="600">brand/blue</text><text x="28" y="186" fill="#a39d92" font-size="11">#1763A6</text>
+    <rect x="128" y="70" width="80" height="80" rx="10" fill="#2e9e6b"/><text x="128" y="170" fill="#16140f" font-size="12" font-weight="600">success</text><text x="128" y="186" fill="#a39d92" font-size="11">#2E9E6B</text>
+    <rect x="228" y="70" width="80" height="80" rx="10" fill="#b8860b"/><text x="228" y="170" fill="#16140f" font-size="12" font-weight="600">warning</text><text x="228" y="186" fill="#a39d92" font-size="11">#B8860B</text>
+    <rect x="328" y="70" width="80" height="80" rx="10" fill="#14304a"/><text x="328" y="170" fill="#16140f" font-size="12" font-weight="600">ink/nav</text><text x="328" y="186" fill="#a39d92" font-size="11">#14304A</text>
+    <text x="28" y="232" fill="#16140f" font-size="18" font-weight="700">Spacing &amp; radius</text>
+    <g fill="#1763a6"><rect x="28" y="250" width="8" height="40" rx="2"/><rect x="56" y="250" width="16" height="40" rx="2"/><rect x="92" y="250" width="24" height="40" rx="2"/><rect x="136" y="250" width="32" height="40" rx="2"/></g>
+    <rect x="200" y="250" width="40" height="40" rx="4" fill="none" stroke="#1763a6" stroke-width="2"/><rect x="252" y="250" width="40" height="40" rx="10" fill="none" stroke="#1763a6" stroke-width="2"/><rect x="304" y="250" width="40" height="40" rx="20" fill="none" stroke="#1763a6" stroke-width="2"/>
+  </g>
+
+  <!-- components -->
+  <g transform="translate(560,210)" filter="url(#sh)">
+    <rect width="480" height="330" rx="16" fill="#fff"/>
+    <text x="28" y="46" fill="#16140f" font-size="18" font-weight="700">Components</text>
+    <rect x="28" y="68" width="140" height="46" rx="10" fill="#1763a6"/><text x="98" y="97" fill="#fff" font-size="14" text-anchor="middle" font-weight="600">Primary</text>
+    <rect x="182" y="68" width="140" height="46" rx="10" fill="#fff" stroke="#1763a6" stroke-width="2"/><text x="252" y="97" fill="#1763a6" font-size="14" text-anchor="middle" font-weight="600">Secondary</text>
+    <rect x="336" y="68" width="116" height="46" rx="10" fill="#f7f9fc" stroke="#e6e9ee"/><text x="394" y="97" fill="#a39d92" font-size="14" text-anchor="middle">Ghost</text>
+    <!-- input + select -->
+    <rect x="28" y="130" width="280" height="44" rx="8" fill="#f4f6f9" stroke="#e6e9ee"/><text x="44" y="158" fill="#a39d92" font-size="13">Field label</text>
+    <rect x="322" y="130" width="130" height="44" rx="8" fill="#f4f6f9" stroke="#e6e9ee"/><text x="338" y="158" fill="#a39d92" font-size="13">Select ▾</text>
+    <!-- status chips -->
+    <rect x="28" y="190" width="92" height="26" rx="13" fill="#eefaf4"/><text x="74" y="208" fill="#2e9e6b" font-size="12" text-anchor="middle">Approved</text>
+    <rect x="130" y="190" width="92" height="26" rx="13" fill="#fff3da"/><text x="176" y="208" fill="#b8860b" font-size="12" text-anchor="middle">In review</text>
+    <rect x="232" y="190" width="92" height="26" rx="13" fill="#e7eef6"/><text x="278" y="208" fill="#1763a6" font-size="12" text-anchor="middle">Submitted</text>
+    <rect x="334" y="190" width="92" height="26" rx="13" fill="#fbecea"/><text x="380" y="208" fill="#c0392b" font-size="12" text-anchor="middle">Rejected</text>
+    <!-- table row -->
+    <rect x="28" y="234" width="424" height="36" rx="6" fill="#f7f9fc"/><text x="44" y="257" fill="#16140f" font-size="12" font-weight="700">REQUEST</text><text x="200" y="257" fill="#16140f" font-size="12" font-weight="700">CLIENT</text><text x="360" y="257" fill="#16140f" font-size="12" font-weight="700">STATUS</text>
+    <text x="44" y="294" fill="#8a847c" font-size="12">#SEC-90412 · Riyadh Dev. Co. · Approved</text>
+  </g>
+
+  <!-- stepper component -->
+  <g transform="translate(1070,210)" filter="url(#sh)">
+    <rect width="430" height="330" rx="16" fill="#fff"/>
+    <text x="28" y="46" fill="#16140f" font-size="18" font-weight="700">Patterns</text>
+    <text x="28" y="80" fill="#8a847c" font-size="13">Stepper</text>
+    <g><circle cx="48" cy="110" r="12" fill="#2e9e6b"/><line x1="60" y1="110" x2="150" y2="110" stroke="#cbd8e6" stroke-width="2"/><circle cx="162" cy="110" r="12" fill="#1763a6"/><line x1="174" y1="110" x2="264" y2="110" stroke="#cbd8e6" stroke-width="2"/><circle cx="276" cy="110" r="12" fill="#fff" stroke="#cbd8e6" stroke-width="2"/><line x1="288" y1="110" x2="378" y2="110" stroke="#cbd8e6" stroke-width="2"/><circle cx="390" cy="110" r="12" fill="#fff" stroke="#cbd8e6" stroke-width="2"/></g>
+    <text x="28" y="166" fill="#8a847c" font-size="13">Inline help / callout</text>
+    <rect x="28" y="178" width="374" height="56" rx="10" fill="#e7eef6"/><circle cx="52" cy="206" r="11" fill="#1763a6"/><text x="52" y="211" fill="#fff" font-size="13" text-anchor="middle" font-weight="700">i</text><text x="74" y="211" fill="#16140f" font-size="13">Contextual guidance, documented in Figma.</text>
+    <text x="28" y="276" fill="#16140f" font-size="14" font-weight="700">Reusable patterns · tokens · documentation</text>
+    <text x="28" y="300" fill="#8a847c" font-size="13">→ reduced design-to-development friction</text>
+  </g>
+
+  <text x="100" y="620" fill="#16140f" font-size="22" font-weight="700">Standardised UI across the entire B2B portal</text>
+</svg>
