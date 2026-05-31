@@ -19,7 +19,7 @@ const tools = ["Figma", "FigJam", "Maze", "Hotjar", "Notion", "Storybook", "Adob
 
 export default function AboutPage() {
   return (
-    <main className="px-6 pt-40 pb-32 md:px-16">
+    <main className="px-6 pt-32 pb-24 md:px-16 md:pt-40 md:pb-32">
       <Reveal>
         <h1 className="max-w-4xl text-4xl font-medium leading-[1.2] tracking-[-0.03em] md:text-6xl">
           {site.summary} Past work includes H&amp;M, Airbnb, and the Government of Saudi Arabia.

@@ -4,7 +4,7 @@ import Reveal from "@/components/motion/Reveal";
 
 export default function ContactFooter() {
   return (
-    <footer className="px-6 py-32 md:px-16">
+    <footer className="px-6 py-24 md:px-16 md:py-32">
       <Reveal>
         <h2 className="text-5xl font-semibold tracking-[-0.04em] md:text-8xl">
           Let&apos;s work together

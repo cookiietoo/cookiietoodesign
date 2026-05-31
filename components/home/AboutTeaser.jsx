@@ -3,7 +3,7 @@ import Reveal from "@/components/motion/Reveal";
 
 export default function AboutTeaser() {
   return (
-    <section className="grid gap-10 px-6 py-32 md:grid-cols-12 md:px-16">
+    <section className="grid gap-10 px-6 py-24 md:grid-cols-12 md:px-16 md:py-32">
       <div className="md:col-span-7">
         <Reveal>
           <p className="text-2xl font-medium leading-[1.25] tracking-[-0.02em] md:text-4xl">

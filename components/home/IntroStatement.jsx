@@ -3,7 +3,7 @@ import Reveal from "@/components/motion/Reveal";
 
 export default function IntroStatement() {
   return (
-    <section className="px-6 py-32 md:px-16 md:py-48">
+    <section className="px-6 py-20 md:px-16 md:py-48">
       <Reveal>
         <p className="mx-auto max-w-4xl text-3xl font-medium leading-[1.15] tracking-[-0.03em] md:text-6xl">
           {site.summary}

@@ -4,7 +4,7 @@ import { site, skills, accentSkills } from "@/lib/content/site";
 import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
 import { usePointerFine } from "@/lib/hooks/usePointerFine";
 
-// stable scattered positions avoiding the central identity zone
+// stable scattered positions avoiding the central identity zone (desktop torch only)
 const LAYOUT = [
   { x: 16, y: 20, s: 46 }, { x: 80, y: 16, s: 34 }, { x: 22, y: 78, s: 52 },
   { x: 84, y: 74, s: 30 }, { x: 13, y: 50, s: 26 }, { x: 88, y: 44, s: 28 },
@@ -57,47 +57,70 @@ export default function TorchHero() {
 
   return (
     <section className="relative h-[100svh] overflow-hidden">
-      {/* faint resting watermark */}
-      <WordLayer revealed={false} />
-
-      {/* revealed layer: torch-masked on fine pointers; on touch/reduced it auto-shows softly */}
-      <div
-        ref={revealRef}
-        className="absolute inset-0"
-        style={
-          torchOn
-            ? { WebkitMaskImage: "radial-gradient(circle 150px at -200px -200px,#000 0%,#000 52%,transparent 100%)",
-                maskImage: "radial-gradient(circle 150px at -200px -200px,#000 0%,#000 52%,transparent 100%)" }
-            : { opacity: reduced ? 1 : 0.5 } /* fallback: gently visible without a torch */
-        }
-      >
-        <WordLayer revealed={true} />
-      </div>
+      {/* desktop torch: faint watermark + cursor-revealed layer */}
+      {torchOn && (
+        <>
+          <WordLayer revealed={false} />
+          <div
+            ref={revealRef}
+            className="absolute inset-0"
+            style={{
+              WebkitMaskImage: "radial-gradient(circle 150px at -200px -200px,#000 0%,#000 52%,transparent 100%)",
+              maskImage: "radial-gradient(circle 150px at -200px -200px,#000 0%,#000 52%,transparent 100%)",
+            }}
+          >
+            <WordLayer revealed={true} />
+          </div>
+        </>
+      )}
 
       {/* vignette */}
       <div className="pointer-events-none absolute inset-0"
            style={{ background: "radial-gradient(120% 120% at 50% 40%, transparent 55%, rgba(22,20,15,.06))" }} />
 
-      {/* identity */}
-      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center">
-        <h1 aria-label="Nilesh Chhipa" className="font-semibold leading-[0.92] tracking-[-0.04em]"
-            style={{ fontSize: "clamp(48px, 9vw, 140px)" }}>
+      {/* identity (always) */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+        <h1
+          aria-label={site.name}
+          className="font-semibold leading-[0.92] tracking-[-0.04em]"
+          style={{ fontSize: "clamp(44px, 13vw, 140px)" }}
+        >
           Nilesh<br />Chhipa
         </h1>
-        <div className="mt-4 text-xs uppercase tracking-[0.28em]" style={{ color: "var(--ink-60)" }}>
+        <div className="mt-4 text-[11px] uppercase tracking-[0.24em] md:text-xs md:tracking-[0.28em]"
+             style={{ color: "var(--ink-60)" }}>
           {site.role}
         </div>
+
+        {/* touch / reduced-motion fallback: skills as a clean wrapped chip cloud */}
+        {!torchOn && (
+          <ul className="mt-9 flex max-w-md flex-wrap items-center justify-center gap-2">
+            {skills.map((skill) => (
+              <li
+                key={skill}
+                className="rounded-full border px-3 py-1 text-[11px] uppercase tracking-[0.1em]"
+                style={{
+                  borderColor: "var(--ink-07)",
+                  color: accentSkills.includes(skill) ? "var(--accent)" : "var(--ink-60)",
+                }}
+              >
+                {skill}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       {/* chrome */}
-      <div className="absolute inset-x-0 top-0 flex justify-between px-8 py-6 text-[11px] uppercase tracking-[0.14em]"
+      <div className="absolute inset-x-0 top-0 flex items-center justify-between gap-3 px-5 py-5 text-[10px] uppercase tracking-[0.12em] md:px-8 md:py-6 md:text-[11px] md:tracking-[0.14em]"
            style={{ color: "var(--ink-60)" }}>
-        <span>{site.brand} — {site.name}</span>
-        <span className="flex items-center gap-2" style={{ color: "var(--accent)" }}>
+        <span className="truncate">{site.brand} — {site.name}</span>
+        <span className="flex shrink-0 items-center gap-2" style={{ color: "var(--accent)" }}>
           <span className="inline-block h-[7px] w-[7px] rounded-full" style={{ background: "var(--accent)" }} />
           {site.status}
         </span>
       </div>
+
       {torchOn && (
         <div className="absolute inset-x-0 bottom-7 text-center text-[11px] uppercase tracking-[0.16em] animate-pulse"
              style={{ color: "var(--ink-40)" }}>

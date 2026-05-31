@@ -36,10 +36,10 @@ export default function ProjectIndex() {
               <span className="col-span-12 text-3xl font-semibold tracking-[-0.03em] transition-transform duration-300 group-hover:translate-x-3 md:col-span-6 md:text-5xl">
                 {p.title}
               </span>
-              <span className="col-span-8 text-sm md:col-span-4" style={{ color: "var(--ink-60)" }}>
+              <span className="col-span-12 text-sm md:col-span-4" style={{ color: "var(--ink-60)" }}>
                 {p.summary.split(",")[0]}
               </span>
-              <span className="col-span-4 text-right font-mono text-xs uppercase tracking-[0.12em] md:col-span-2"
+              <span className="col-span-12 text-left font-mono text-xs uppercase tracking-[0.12em] md:col-span-2 md:text-right"
                     style={{ color: "var(--ink-40)" }}>
                 {p.client} · {p.year}{p.nda ? " · NDA" : ""}
               </span>

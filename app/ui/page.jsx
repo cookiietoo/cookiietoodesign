@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function UIGalleryPage() {
   return (
-    <main className="px-6 pt-40 pb-32 md:px-16">
+    <main className="px-6 pt-32 pb-24 md:px-16 md:pt-40 md:pb-32">
       <Link
         href="/"
         data-cursor="view"

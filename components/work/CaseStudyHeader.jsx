@@ -1,6 +1,6 @@
 export default function CaseStudyHeader({ project }) {
   return (
-    <header className="px-6 pt-40 pb-16 md:px-16">
+    <header className="px-6 pt-32 pb-12 md:px-16 md:pt-40 md:pb-16">
       <div className="font-mono text-xs uppercase tracking-[0.2em]" style={{ color: "var(--ink-40)" }}>
         {project.client} · {project.year}
       </div>
