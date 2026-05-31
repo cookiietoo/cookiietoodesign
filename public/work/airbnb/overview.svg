@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="36" flood-color="#16140f" flood-opacity="0.16"/></filter>
+    <filter id="sh2" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#16140f" flood-opacity="0.12"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#f4f1ea"/>
+  <circle cx="1320" cy="240" r="380" fill="#fdeceb"/>
+  <circle cx="250" cy="820" r="240" fill="#efe9dd"/>
+
+  <!-- left copy -->
+  <text x="110" y="170" fill="#FF5A5F" font-size="20" letter-spacing="5" font-weight="700">AIRBNB PAYMENTS</text>
+  <text x="106" y="320" fill="#16140f" font-size="84" font-weight="700" letter-spacing="-3">Incentive</text>
+  <text x="106" y="410" fill="#16140f" font-size="84" font-weight="700" letter-spacing="-3">programs,</text>
+  <text x="106" y="500" fill="#16140f" font-size="84" font-weight="700" letter-spacing="-3">with</text>
+  <text x="300" y="500" fill="#FF5A5F" font-size="84" font-weight="700" letter-spacing="-3">confidence.</text>
+  <text x="110" y="566" fill="#8a847c" font-size="24">For business users · 190+ countries · 70+ currencies</text>
+
+  <!-- builder window -->
+  <g transform="translate(760,170)" filter="url(#sh)">
+    <rect width="720" height="660" rx="20" fill="#ffffff"/>
+    <rect width="720" height="50" rx="20" fill="#fbf5f4"/><rect y="30" width="720" height="20" fill="#fbf5f4"/>
+    <circle cx="30" cy="25" r="6" fill="#e3d9d3"/><circle cx="52" cy="25" r="6" fill="#e3d9d3"/><circle cx="74" cy="25" r="6" fill="#e3d9d3"/>
+    <text x="360" y="30" fill="#a39d92" font-size="13" text-anchor="middle">Create incentive program</text>
+
+    <text x="40" y="104" fill="#16140f" font-size="24" font-weight="700">Choose an offering</text>
+    <text x="40" y="132" fill="#8a847c" font-size="14">Tips, benefits, and live examples help you pick the right one.</text>
+
+    <!-- three offering cards -->
+    <g transform="translate(40,156)">
+      <rect width="200" height="150" rx="16" fill="#fff" stroke="#FF5A5F" stroke-width="2.5"/>
+      <circle cx="34" cy="40" r="18" fill="#fdeceb"/><text x="34" y="46" font-size="18" text-anchor="middle">💵</text>
+      <text x="24" y="92" fill="#16140f" font-size="18" font-weight="700">Cash</text>
+      <text x="24" y="116" fill="#8a847c" font-size="12">Direct payout to</text><text x="24" y="132" fill="#8a847c" font-size="12">eligible accounts</text>
+      <circle cx="176" cy="26" r="12" fill="#FF5A5F"/><path d="M170 26 l5 5 l9 -10" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(260,156)">
+      <rect width="200" height="150" rx="16" fill="#faf8f5" stroke="#ece6da"/>
+      <circle cx="34" cy="40" r="18" fill="#f0ece5"/><text x="34" y="46" font-size="18" text-anchor="middle">💳</text>
+      <text x="24" y="92" fill="#16140f" font-size="18" font-weight="700">Credit</text>
+      <text x="24" y="116" fill="#8a847c" font-size="12">Applied at</text><text x="24" y="132" fill="#8a847c" font-size="12">checkout</text>
+    </g>
+    <g transform="translate(480,156)">
+      <rect width="200" height="150" rx="16" fill="#faf8f5" stroke="#ece6da"/>
+      <circle cx="34" cy="40" r="18" fill="#f0ece5"/><text x="34" y="46" font-size="18" text-anchor="middle">🎟️</text>
+      <text x="24" y="92" fill="#16140f" font-size="18" font-weight="700">Coupon</text>
+      <text x="24" y="116" fill="#8a847c" font-size="12">Code-based,</text><text x="24" y="132" fill="#8a847c" font-size="12">rule-driven</text>
+    </g>
+
+    <!-- budget -->
+    <text x="40" y="354" fill="#16140f" font-size="14" font-weight="700">Budget</text>
+    <text x="680" y="354" fill="#16140f" font-size="14" font-weight="700" text-anchor="end">$ 250,000</text>
+    <rect x="40" y="366" width="640" height="12" rx="6" fill="#f0ece5"/>
+    <rect x="40" y="366" width="420" height="12" rx="6" fill="#FF5A5F"/>
+    <circle cx="460" cy="372" r="11" fill="#fff" stroke="#FF5A5F" stroke-width="3"/>
+    <text x="40" y="404" fill="#8a847c" font-size="12">65% allocated · watchers notified at 80%</text>
+
+    <!-- watchers -->
+    <text x="40" y="448" fill="#16140f" font-size="14" font-weight="700">Budget watchers</text>
+    <g transform="translate(40,462)">
+      <circle cx="20" cy="20" r="20" fill="#fdeceb"/><text x="20" y="26" font-size="14" text-anchor="middle" fill="#FF5A5F" font-weight="700">AK</text>
+      <circle cx="52" cy="20" r="20" fill="#e7eef6"/><text x="52" y="26" font-size="14" text-anchor="middle" fill="#1763a6" font-weight="700">MR</text>
+      <circle cx="84" cy="20" r="20" fill="#eefaf4"/><text x="84" y="26" font-size="14" text-anchor="middle" fill="#2e9e6b" font-weight="700">JS</text>
+      <rect x="112" y="4" width="34" height="32" rx="16" fill="#f0ece5"/><text x="129" y="25" font-size="13" text-anchor="middle" fill="#8a847c">+5</text>
+    </g>
+
+    <!-- footer -->
+    <line x1="40" y1="540" x2="680" y2="540" stroke="#f0ebe1"/>
+    <rect x="40" y="560" width="160" height="52" rx="26" fill="#fff" stroke="#e3d9d3" stroke-width="2"/><text x="120" y="592" fill="#16140f" font-size="15" text-anchor="middle" font-weight="600">Save draft</text>
+    <rect x="468" y="560" width="212" height="52" rx="26" fill="#FF5A5F"/><text x="574" y="592" fill="#fff" font-size="15" text-anchor="middle" font-weight="700">Launch program</text>
+  </g>
+
+  <!-- floating chips -->
+  <g font-size="15" font-weight="600" fill="#16140f">
+    <g filter="url(#sh2)"><rect x="690" y="250" width="150" height="46" rx="23" fill="#fff"/><circle cx="716" cy="273" r="6" fill="#FF5A5F"/><text x="732" y="279">190+ countries</text></g>
+    <g filter="url(#sh2)"><rect x="690" y="690" width="150" height="46" rx="23" fill="#fff"/><circle cx="716" cy="713" r="6" fill="#FF5A5F"/><text x="732" y="719">70+ currencies</text></g>
+  </g>
+</svg>
