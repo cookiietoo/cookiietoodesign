@@ -89,7 +89,7 @@ export default function TorchHero() {
         </h1>
         <div className="mt-4 text-[11px] uppercase tracking-[0.24em] md:text-xs md:tracking-[0.28em]"
              style={{ color: "var(--ink-60)" }}>
-          {site.role}
+          {site.role} · {site.experience}
         </div>
 
         {/* touch / reduced-motion fallback: skills as a clean wrapped chip cloud */}

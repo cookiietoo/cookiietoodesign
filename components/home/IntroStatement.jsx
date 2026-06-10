@@ -11,7 +11,7 @@ export default function IntroStatement() {
       </Reveal>
       <Reveal delay={0.1}>
         <p className="mt-8 font-mono text-xs uppercase tracking-[0.2em]" style={{ color: "var(--ink-40)" }}>
-          {site.role} · 6 years
+          {site.role} · 7 years
         </p>
       </Reveal>
     </section>
