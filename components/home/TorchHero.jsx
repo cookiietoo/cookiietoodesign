@@ -47,7 +47,7 @@ export default function TorchHero() {
     if (!torchOn) return;
     const el = revealRef.current;
     const move = (e) => {
-      const m = `radial-gradient(circle 150px at ${e.clientX}px ${e.clientY}px, #000 0%, #000 52%, transparent 100%)`;
+      const m = `radial-gradient(circle 200px at ${e.clientX}px ${e.clientY}px, #000 0%, #000 52%, transparent 100%)`;
       el.style.webkitMaskImage = m;
       el.style.maskImage = m;
     };
@@ -65,8 +65,8 @@ export default function TorchHero() {
             ref={revealRef}
             className="absolute inset-0"
             style={{
-              WebkitMaskImage: "radial-gradient(circle 150px at -200px -200px,#000 0%,#000 52%,transparent 100%)",
-              maskImage: "radial-gradient(circle 150px at -200px -200px,#000 0%,#000 52%,transparent 100%)",
+              WebkitMaskImage: "radial-gradient(circle 200px at -200px -200px,#000 0%,#000 52%,transparent 100%)",
+              maskImage: "radial-gradient(circle 200px at -200px -200px,#000 0%,#000 52%,transparent 100%)",
             }}
           >
             <WordLayer revealed={true} />
